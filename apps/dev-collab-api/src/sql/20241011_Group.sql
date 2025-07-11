@@ -1,0 +1,6 @@
+CREATE TABLE `group` (
+    `group_id` INT AUTO_INCREMENT PRIMARY KEY,
+    `group_name` VARCHAR(1000) NOT NULL,
+    `creator_id` VARCHAR(255) NOT NULL,
+    `create_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)

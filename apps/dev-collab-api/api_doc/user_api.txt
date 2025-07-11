@@ -1,0 +1,138 @@
+1. Generate Verification Code
+Endpoint: GET /v-code
+Description: Generates a verification code for the specified email address.
+
+Request
+Query Parameters:
+email (string): The email address to which the verification code will be sent.
+Response
+Success (200):
+json
+{
+    "result": "SUCCESS",
+    "email": "user@example.com"
+}
+Error (400):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "INVALID_EMAIL"
+}
+
+2. Verify Code
+Endpoint: POST /v-code
+Description: Verifies the provided verification code for the specified email address.
+
+Request
+Body Parameters:
+json
+{
+    "email": "user@example.com",
+    "code": "123456"
+}
+Response
+Success (200):
+json
+{
+    "result": "SUCCESS",
+    "email": "user@example.com"
+}
+Error (400):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "INVALID_INPUT"
+}
+Error (404):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "VERIFICATION_NOT_FOUND"
+}
+
+3. Create Account
+Endpoint: POST /create
+Description: Creates a new user account with the provided details.
+
+Request
+Body Parameters:
+json
+{
+    "email": "user@example.com",
+    "code": "123456",
+    "password": "securePassword",
+    "invitation": "invitationCode" // optional
+}
+Response
+Success (200):
+json
+{
+    "result": "SUCCESS",
+    "token": "your_jwt_token"
+}
+Error (400):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "INVALID_INPUT"
+}
+
+4. Login with Password
+Endpoint: POST /login/password
+Description: Authenticates the user using email and password.
+
+Request
+Body Parameters:
+json
+{
+    "email": "user@example.com",
+    "password": "securePassword"
+}
+Response
+Success (200):
+json
+{
+    "result": "SUCCESS",
+    "token": "your_jwt_token"
+}
+Error (400):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "USER_NOT_FOUND"
+}
+5. Login with Token
+Endpoint: POST /login/token
+Description: Authenticates the user using a JWT token.
+
+Request
+Body Parameters:
+json
+{
+    "token": "your_jwt_token"
+}
+Response
+Success (200):
+json
+{
+    "result": "SUCCESS",
+    "payload": {
+        // Decoded payload information
+    }
+}
+Error (400):
+json
+{
+    "result": "UNSUCCESS",
+    "error": "INVALID_INPUT"
+}
+Error Codes
+INVALID_INPUT: One or more required fields are missing or invalid.
+INVALID_EMAIL: The provided email is not valid.
+VERIFICATION_NOT_FOUND: No verification record found for the provided email.
+USER_NOT_FOUND: No user found with the provided email.
+LOGIN_FAILED: An error occurred during the login process.
+FAILED_TO_CREATE: An error occurred while creating the user account.
+
+Notes
+Tokens should be stored securely on the client side (e.g., in HTTP-only cookies or secure storage).

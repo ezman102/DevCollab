@@ -1,0 +1,132 @@
+// _responsive.scss
+
+@use 'sass:math';
+@import 'variables';
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: 0px !important;
+
+  @include responsive(small) {
+    max-width: $container-small;
+  }
+
+  @include responsive(medium) {
+    max-width: $container-medium;
+  }
+
+  @include responsive(large) {
+    max-width: $container-large;
+  }
+
+  @include responsive(xlarge) {
+    max-width: $container-xlarge;
+  }
+
+  @include responsive(xxlarge) {
+    max-width: $container-xxlarge;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: $container-max;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @extend .col;
+  }
+
+  @include responsive(small) {
+    .col-sm-#{$i} {
+      flex: 0 0 percentage(math.div($i, 12));
+      max-width: percentage(math.div($i, 12));
+    }
+  }
+
+  @include responsive(medium) {
+    .col-md-#{$i} {
+      flex: 0 0 percentage(math.div($i, 12));
+      max-width: percentage(math.div($i, 12));
+    }
+  }
+
+  @include responsive(large) {
+    .col-lg-#{$i} {
+      flex: 0 0 percentage(math.div($i, 12));
+      max-width: percentage(math.div($i, 12));
+    }
+  }
+
+  @include responsive(xlarge) {
+    .col-xl-#{$i} {
+      flex: 0 0 percentage(math.div($i, 12));
+      max-width: percentage(math.div($i, 12));
+    }
+  }
+
+  @include responsive(xxlarge) {
+    .col-xxl-#{$i} {
+      flex: 0 0 percentage(math.div($i, 12));
+      max-width: percentage(math.div($i, 12));
+    }
+  }
+}
+
+@mixin hidden-breakpoint($min, $max: null) {
+  @if $max {
+    @media (min-width: $min) and (max-width: $max) {
+      display: none !important;
+    }
+  } @else {
+    @media (min-width: $min) {
+      display: none !important;
+    }
+  }
+}
+
+.hidden-xs {
+  @include hidden-breakpoint(0, $breakpoint-small - 1);
+}
+
+.hidden-sm {
+  @include hidden-breakpoint($breakpoint-small, $breakpoint-medium - 1);
+}
+
+.hidden-md {
+  @include hidden-breakpoint($breakpoint-medium, $breakpoint-large - 1);
+}
+
+.hidden-lg {
+  @include hidden-breakpoint($breakpoint-large, $breakpoint-xlarge - 1);
+}
+
+.hidden-xl {
+  @include hidden-breakpoint($breakpoint-xlarge, $breakpoint-xxlarge - 1);
+}
+
+.hidden-xxl {
+  @include hidden-breakpoint($breakpoint-xxlarge);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "ecmel.vscode-html-css",
+    "csstools.postcss",
+    "hollowtree.vue-snippets",
+    "octref.vetur",
+    "nucllear.vscode-extension-auto-import",
+    "bradlc.vscode-tailwindcss",
+    "anbuselvanrocky.bootstrap5-vscode",
+    "thekalinga.bootstrap4-vscode"
+  ]
+}

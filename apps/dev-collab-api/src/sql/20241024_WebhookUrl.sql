@@ -1,0 +1,6 @@
+CREATE TABLE webhook_urls (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `url` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

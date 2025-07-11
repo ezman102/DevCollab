@@ -1,0 +1,111 @@
+// _variables.scss
+
+// Breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1400px;
+
+// Container widths
+$container-small: 540px;
+$container-medium: 720px;
+$container-large: 960px;
+$container-xlarge: 1140px;
+$container-xxlarge: 1320px;
+$container-max: 1880px;
+
+// Custom Colors
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #00bd7e;
+
+$gray-1: #eae7dc;
+$gray-2: #8e8d8a;
+$brown-1: #d8c3a5;
+$pink-red-1: #e98074;
+$red-1: #e85a4f;
+
+// Color palette
+$vt-c-white: #ffffff;
+$vt-c-white-soft: #f8f8f8;
+$vt-c-white-mute: #f2f2f2;
+
+$vt-c-black: #181818;
+$vt-c-black-soft: #222222;
+$vt-c-black-mute: #282828;
+
+$vt-c-indigo: #2c3e50;
+
+$vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+$vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+$vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+$vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+$vt-c-text-light-1: $vt-c-indigo;
+$vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+$vt-c-text-dark-1: $vt-c-white;
+$vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+// Semantic color variables
+$color-background: $vt-c-white;
+$color-background-soft: $vt-c-white-soft;
+$color-background-mute: $vt-c-white-mute;
+
+$color-border: $vt-c-divider-light-2;
+$color-border-hover: $vt-c-divider-light-1;
+
+$color-heading: $vt-c-text-light-1;
+$color-text: $vt-c-text-light-1;
+
+$section-gap: 160px;
+
+// Font sizes
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 3; // 48px
+$h2-font-size: $font-size-base * 2.625; // 42px
+$h3-font-size: $font-size-base * 2; // 32px
+$h4-font-size: $font-size-base * 1.75; // 28px
+$h5-font-size: $font-size-base * 1.5; // 24px
+$c1-font-size: $font-size-base * 1.125; // 18px (p1)
+$c2-font-size: $font-size-base * 1; // 16px (p2)
+$c3-font-size: $font-size-base * 0.875; // 14px (p3)
+$n1-font-size: $font-size-base * 4.5; // 72px
+$n2-font-size: $font-size-base * 3; // 48px
+$n3-font-size: $font-size-base * 2.25; // 36px
+
+// Mobile font sizes
+$h1-font-size-mb: $font-size-base * 1.5; // 24px
+$h2-font-size-mb: $font-size-base * 1.5; // 24px
+$h3-font-size-mb: $font-size-base * 1.375; // 22px
+$h4-font-size-mb: $font-size-base * 1.25; // 20px
+$h5-font-size-mb: $font-size-base * 1.125; // 18px
+$c1-font-size-mb: $font-size-base * 1; // 16px
+$c2-font-size-mb: $font-size-base * 0.875; // 14px
+$c3-font-size-mb: $font-size-base * 0.75; // 12px
+$n1-font-size-mb: $font-size-base * 3; // 48px
+$n2-font-size-mb: $font-size-base * 2.25; // 36px
+$n3-font-size-mb: $font-size-base * 1.75; // 28px
+
+// Font weights
+$font-weight-lighter: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-light;
+
+$h1-font-weight: $font-weight-medium;
+$h2-font-weight: $font-weight-medium;
+$h3-font-weight: $font-weight-medium;
+$h4-font-weight: $font-weight-medium;
+$h5-font-weight: $font-weight-medium;
+$c1-font-weight: $font-weight-light;
+$c2-font-weight: $font-weight-light;
+$c3-font-weight: $font-weight-light;
+$n1-font-weight: $font-weight-medium;
+$n2-font-weight: $font-weight-medium;
+$n3-font-weight: $font-weight-medium;

@@ -1,0 +1,9 @@
+{
+    "Hello": "Hi there!",
+    "How are you?": "I'm doing well, thank you!",
+    "Goodbye": "See you later!",
+    "How to add tasks?":"Please head to 'Projects' tab on the left.",
+    "How to add new users?":"Please go to 'Home > Team Management'.",
+    "Where to see all my tasks?":"Please head to 'Projects' tab on the left.",
+    "What is DevCollab?":"DevCollab is an open-source task management software designed specially for software management projects. It is proudly presented by Group 22 of 2024 CS5351 students."
+}

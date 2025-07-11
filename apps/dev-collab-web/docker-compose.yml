@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  web:
+    image: dev-collab-web:latest
+    ports:
+      - 80:3000
+    # restart: always
+    expose:
+      - 3000
+    networks:
+      - default
+
+  # nginx:
+  #   image: nginx:latest
+  #   # restart: always
+  #   ports:
+  #     - 8888:80
+  #   expose:
+  #     - 80
+  #   volumes:
+  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+  #     - ./nginx/logs:/var/log/nginx
+  #   networks:
+  #     - default
+  #   depends_on:
+  #     - web
+
+  # ngrok:
+  #   image: ngrok/ngrok:latest
+  #   command: ["http", "nginx:80"]
+  #   environment:
+  #     NGROK_AUTHTOKEN: ""
+  #   restart: always
+  #   ports:
+  #     - 4040:4040
+  #   volumes:
+  #     - ./ngrok:/ngrok
+  #   networks:
+  #     - default
+  #   depends_on:
+  #     - nginx
+
+networks:
+  default:
+    driver: bridge

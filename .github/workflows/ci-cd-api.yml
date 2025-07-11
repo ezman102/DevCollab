@@ -1,0 +1,49 @@
+name: api-build-and-deploy
+on:
+  push:
+    branches:
+      - develop
+      - master
+jobs:
+  dockerize:
+    name: Dockerize
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: ./apps/dev-collab-api
+          file: ./apps/dev-collab-api/Dockerfile
+          tags: dev-collab-api:latest
+          outputs: type=docker,dest=./apps/dev-collab-api/image.tar
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-docker
+          path: ./apps/dev-collab-api/image.tar
+
+  deploy:
+    needs: dockerize
+    name: Deploy
+    runs-on: [self-hosted, linux, x64, api-runner]
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: api-docker
+      - name: Load image with Docker
+        working-directory: ./
+        run: |
+          docker load -i image.tar
+          docker image ls
+      - name: Run Docker compose
+        working-directory: ./
+        run: docker compose up -d

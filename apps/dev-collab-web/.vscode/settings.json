@@ -1,0 +1,57 @@
+{
+  "eslint.run": "onSave",
+  "vetur.format.enable": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[html]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "never"
+    }
+  },
+  "cSpell.words": [
+    "datalabels",
+    "mozjpeg",
+    "panleft",
+    "panright",
+    "rowspan",
+    "sdgs",
+    "SPL",
+    "SPL's",
+    "tweens",
+    "webp"
+  ],
+  "errorLens": {
+    "enabledDiagnosticLevels": [
+      "error",
+      "warning"
+    ]
+  },
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+  "prettier.resolveGlobalModules": false,
+  "prettier.ignorePath": ".prettierignore",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "prettier.enableDebugLogs": true
+}

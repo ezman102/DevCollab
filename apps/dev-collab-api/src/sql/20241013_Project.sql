@@ -1,0 +1,1 @@
+ALTER TABLE Project MODIFY avatar longblob;

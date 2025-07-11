@@ -1,0 +1,41 @@
+// _base.scss
+
+@import 'variables';
+@import 'fonts';
+
+:root {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: $color-text;
+  background: $color-background;
+  line-height: 1.6;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    //color: $vt-c-text-dark-2;
+    background: $vt-c-black;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid $color-border-hover;
+  outline-offset: 2px;
+}

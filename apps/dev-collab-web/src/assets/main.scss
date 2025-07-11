@@ -1,0 +1,177 @@
+// main.scss
+
+@use 'sass:color';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-weight: $h1-font-weight;
+  font-size: $h1-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2 {
+  font-weight: $h2-font-weight;
+  font-size: $h2-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $h2-font-size;
+  }
+}
+
+h3 {
+  font-weight: $h3-font-weight;
+  font-size: $h3-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $h3-font-size;
+  }
+}
+
+h4 {
+  font-weight: $h4-font-weight;
+  font-size: $h4-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $h4-font-size;
+  }
+}
+
+h5 {
+  font-weight: $h5-font-weight;
+  font-size: $h5-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $h5-font-size;
+  }
+}
+
+.c1 {
+  font-weight: $c1-font-weight;
+  font-size: $c1-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $c1-font-size;
+  }
+}
+
+.c2 {
+  font-weight: $c2-font-weight;
+  font-size: $c2-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $c2-font-size;
+  }
+}
+
+.c3 {
+  font-weight: $c3-font-weight;
+  font-size: $c3-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $c3-font-size;
+  }
+}
+
+.n1 {
+  font-weight: $n1-font-weight;
+  font-size: $n1-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $n1-font-size;
+  }
+}
+
+.n2 {
+  font-weight: $n2-font-weight;
+  font-size: $n2-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $n2-font-size;
+  }
+}
+
+.n3 {
+  font-weight: $n3-font-weight;
+  font-size: $n3-font-size-mb;
+
+  @include responsive(medium) {
+    font-size: $n3-font-size;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.light-text {
+  font-weight: $font-weight-light;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  // &:hover {
+  //   color: color.scale($secondary-color, $lightness: -27%);
+  // }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $primary-color;
+    color: $vt-c-white;
+
+    &:hover {
+      background-color: color.scale($primary-color, $lightness: -18.8%);
+    }
+  }
+
+  &-secondary {
+    background-color: $secondary-color;
+    color: $vt-c-white;
+
+    &:hover {
+      background-color: color.scale($secondary-color, $lightness: -20.4%);
+    }
+  }
+}
+
+.modal-dialog {
+  // max-width: var(--bs-modal-width);
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.bg-image {
+  background-image: url("/public/project-background.png");
+  background-size: cover;
+  background-position: center;
+}
